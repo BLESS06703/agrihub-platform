@@ -1,0 +1,16 @@
+INSERT INTO crop_catalog (id, name_en, name_ny, scientific_name, category, growing_period_days, expected_yield_min_kg_ha, expected_yield_max_kg_ha, is_active) VALUES
+(uuid_generate_v4(), 'Maize', 'Chimanga', 'Zea mays', 'CEREAL', 120, 2000, 6000, TRUE),
+(uuid_generate_v4(), 'Tobacco', 'Fodya', 'Nicotiana tabacum', 'CASH_CROP', 150, 1500, 3000, TRUE),
+(uuid_generate_v4(), 'Tea', 'Tiyi', 'Camellia sinensis', 'CASH_CROP', 365, 2000, 4000, TRUE),
+(uuid_generate_v4(), 'Sugarcane', 'Mzimbe', 'Saccharum officinarum', 'CASH_CROP', 365, 60000, 100000, TRUE),
+(uuid_generate_v4(), 'Groundnuts', 'Mtedza', 'Arachis hypogaea', 'LEGUME', 120, 800, 2500, TRUE),
+(uuid_generate_v4(), 'Cotton', 'Thonje', 'Gossypium hirsutum', 'CASH_CROP', 180, 1000, 2500, TRUE),
+(uuid_generate_v4(), 'Beans', 'Nyemba', 'Phaseolus vulgaris', 'LEGUME', 90, 800, 2000, TRUE),
+(uuid_generate_v4(), 'Cassava', 'Chinangwa', 'Manihot esculenta', 'TUBER', 365, 15000, 40000, TRUE),
+(uuid_generate_v4(), 'Sweet Potatoes', 'Mbatata', 'Ipomoea batatas', 'TUBER', 120, 8000, 20000, TRUE),
+(uuid_generate_v4(), 'Rice', 'Mpunga', 'Oryza sativa', 'CEREAL', 150, 2000, 5000, TRUE),
+(uuid_generate_v4(), 'Sorghum', 'Mapira', 'Sorghum bicolor', 'CEREAL', 120, 1000, 3000, TRUE),
+(uuid_generate_v4(), 'Soybeans', 'Soya', 'Glycine max', 'LEGUME', 120, 1500, 3500, TRUE),
+(uuid_generate_v4(), 'Tomato', 'Tomato', 'Solanum lycopersicum', 'VEGETABLE', 90, 15000, 40000, TRUE),
+(uuid_generate_v4(), 'Onion', 'Anyezi', 'Allium cepa', 'VEGETABLE', 120, 15000, 35000, TRUE),
+(uuid_generate_v4(), 'Coffee', 'Khofi', 'Coffea arabica', 'CASH_CROP', 365, 800, 2000, TRUE);

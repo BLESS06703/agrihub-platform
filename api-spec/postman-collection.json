@@ -1,0 +1,29 @@
+{
+  "info": { "name": "AgriHub Platform API", "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json" },
+  "item": [
+    { "name": "System", "item": [
+      { "name": "Health Check", "request": { "method": "GET", "url": "{{baseUrl}}/health" } }
+    ]},
+    { "name": "Identity", "item": [
+      { "name": "Login", "request": { "method": "POST", "url": "{{baseUrl}}/auth/login", "body": { "mode": "raw", "raw": "{\"email\":\"farmer@agrihub.mw\",\"password\":\"password\"}" } } },
+      { "name": "Get Profile", "request": { "method": "GET", "url": "{{baseUrl}}/profile", "header": [{ "key": "Authorization", "value": "Bearer {{token}}" }] } }
+    ]},
+    { "name": "Farms", "item": [
+      { "name": "List Farms", "request": { "method": "GET", "url": "{{baseUrl}}/farms", "header": [{ "key": "Authorization", "value": "Bearer {{token}}" }] } },
+      { "name": "Create Farm", "request": { "method": "POST", "url": "{{baseUrl}}/farms", "header": [{ "key": "Authorization", "value": "Bearer {{token}}" }], "body": { "mode": "raw", "raw": "{\"name\":\"Test Farm\",\"areaHectares\":10.5,\"district\":\"Mzimba\"}" } } }
+    ]},
+    { "name": "Livestock", "item": [
+      { "name": "List Animals", "request": { "method": "GET", "url": "{{baseUrl}}/livestock/animals", "header": [{ "key": "Authorization", "value": "Bearer {{token}}" }] } }
+    ]},
+    { "name": "Finance", "item": [
+      { "name": "Profit & Loss", "request": { "method": "GET", "url": "{{baseUrl}}/finance/profit-loss", "header": [{ "key": "Authorization", "value": "Bearer {{token}}" }] } }
+    ]},
+    { "name": "AI", "item": [
+      { "name": "Chat", "request": { "method": "POST", "url": "{{baseUrl}}/ai/chat", "body": { "mode": "raw", "raw": "{\"query\":\"Should I plant maize this week?\"}" } } }
+    ]}
+  ],
+  "variable": [
+    { "key": "baseUrl", "value": "http://localhost:8080/v1" },
+    { "key": "token", "value": "" }
+  ]
+}

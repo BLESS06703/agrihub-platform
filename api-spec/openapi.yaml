@@ -1,0 +1,87 @@
+openapi: 3.0.3
+info:
+  title: AgriHub Platform API
+  description: Enterprise Multi-Country Agricultural SaaS Platform
+  version: 5.0.0
+  contact: { name: AgriHub Platform, email: api@agrihub.mw }
+
+servers:
+  - url: https://api.agrihub.mw/v1
+    description: Production (Malawi)
+  - url: http://localhost:8080/v1
+    description: Development
+
+tags:
+  - name: System
+  - name: Identity
+  - name: Farms
+  - name: Livestock
+  - name: Finance
+  - name: Marketplace
+  - name: Inventory
+  - name: AI
+
+paths:
+  /health:
+    get:
+      tags: [System]
+      summary: Platform health check
+      responses: { '200': { description: System status } }
+
+  /auth/login:
+    post:
+      tags: [Identity]
+      summary: User login
+      requestBody:
+        content: { application/json: { schema: { type: object, properties: { email: { type: string }, password: { type: string } } } } }
+      responses:
+        '200': { description: JWT tokens }
+        '401': { description: Invalid credentials }
+
+  /farms:
+    get:
+      tags: [Farms]
+      summary: List farms
+      security: [{ bearerAuth: [] }]
+      parameters:
+        - { name: page, in: query, schema: { type: integer } }
+        - { name: per_page, in: query, schema: { type: integer } }
+      responses: { '200': { description: Farm list } }
+    post:
+      tags: [Farms]
+      summary: Create farm
+      security: [{ bearerAuth: [] }]
+      responses: { '201': { description: Farm created } }
+
+  /livestock/animals:
+    get:
+      tags: [Livestock]
+      summary: List animals
+      security: [{ bearerAuth: [] }]
+      responses: { '200': { description: Animal list } }
+
+  /finance/profit-loss:
+    get:
+      tags: [Finance]
+      summary: Profit and loss statement
+      security: [{ bearerAuth: [] }]
+      responses: { '200': { description: P&L data } }
+
+  /marketplace/listings:
+    get:
+      tags: [Marketplace]
+      summary: Browse produce listings
+      responses: { '200': { description: Active listings } }
+
+  /ai/chat:
+    post:
+      tags: [AI]
+      summary: AI farming assistant
+      responses: { '200': { description: AI response } }
+
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT

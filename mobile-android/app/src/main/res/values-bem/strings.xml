@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">AgriHub</string>
+    <string name="login">Ingileni</string>
+    <string name="register">Pangeni Akaunti</string>
+    <string name="dashboard">Dashboard</string>
+    <string name="farms">Amabala</string>
+    <string name="livestock">Ifikoko</string>
+    <string name="marketplace">Maketi</string>
+    <string name="finance">Ifyuma</string>
+    <string name="reports">Malipoti</string>
+    <string name="profile">Ifyo Tuli</string>
+    <string name="logout">Fumeni</string>
+    <string name="welcome_back">Mwabwela</string>
+    <string name="forgot_password">Mwalaba Password?</string>
+    <string name="remember_device">Mwibukishe ichi chipangililo</string>
+    <string name="no_account">Tamwakwata akaunti?</string>
+</resources>

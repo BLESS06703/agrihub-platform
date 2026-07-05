@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">AgriHub</string>
+    <string name="login">Sign In</string>
+    <string name="register">Create Account</string>
+    <string name="dashboard">Dashboard</string>
+    <string name="farms">Farms</string>
+    <string name="livestock">Livestock</string>
+    <string name="marketplace">Marketplace</string>
+    <string name="finance">Finance</string>
+    <string name="reports">Reports</string>
+    <string name="profile">Profile</string>
+    <string name="logout">Logout</string>
+    <string name="welcome_back">Welcome Back</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="remember_device">Remember this device</string>
+    <string name="no_account">Don\'t have an account?</string>
+</resources>

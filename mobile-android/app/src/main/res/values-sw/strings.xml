@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">AgriHub</string>
+    <string name="login">Ingia</string>
+    <string name="register">Fungua Akaunti</string>
+    <string name="dashboard">Dashibodi</string>
+    <string name="farms">Mashamba</string>
+    <string name="livestock">Mifugo</string>
+    <string name="marketplace">Soko</string>
+    <string name="finance">Fedha</string>
+    <string name="reports">Ripoti</string>
+    <string name="profile">Wasifu</string>
+    <string name="logout">Toka</string>
+    <string name="welcome_back">Karibu Tena</string>
+    <string name="forgot_password">Umesahau Nenosiri?</string>
+    <string name="remember_device">Kumbuka kifaa hiki</string>
+    <string name="no_account">Huna akaunti?</string>
+</resources>
