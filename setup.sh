@@ -18,12 +18,12 @@ sleep 5
 echo "[2/6] Running database migrations..."
 for f in database/migrations/V*.sql; do
     echo "  Running: $f"
-    PGPASSWORD=agrihub psql -h localhost -U agrihub -d agrihub -f "$f" -q
+    PGPASSWORD=${DB_PASSWORD:-changeme} psql -h localhost -U agrihub -d agrihub -f "$f" -q
 done
 echo "  All migrations applied."
 
 echo "[3/6] Seeding data..."
-PGPASSWORD=agrihub psql -h localhost -U agrihub -d agrihub -f database/seeds/crop_catalog.sql -q 2>/dev/null || echo "  Seed data skipped (file not found)"
+PGPASSWORD=${DB_PASSWORD:-changeme} psql -h localhost -U agrihub -d agrihub -f database/seeds/crop_catalog.sql -q 2>/dev/null || echo "  Seed data skipped (file not found)"
 
 echo "[4/6] Building backend..."
 cd backend && ./gradlew shadowJar --no-daemon && cd ..

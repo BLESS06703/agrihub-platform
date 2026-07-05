@@ -24,15 +24,15 @@ echo "  Infrastructure running."
 
 echo "[2/8] Running database migrations..."
 for f in database/migrations/V*.sql; do
-    PGPASSWORD=agrihub psql -h localhost -U agrihub -d agrihub -f "$f" -q
+    PGPASSWORD=${DB_PASSWORD:-changeme} psql -h localhost -U agrihub -d agrihub -f "$f" -q
     echo "  Applied: $f"
 done
 echo "  All 22 migrations applied. 169 tables created."
 
 echo "[3/8] Seeding data..."
-PGPASSWORD=agrihub psql -h localhost -U agrihub -d agrihub -f database/seeds/crop_catalog.sql -q
-PGPASSWORD=agrihub psql -h localhost -U agrihub -d agrihub -f database/seeds/vaccine_schedules.sql -q
-PGPASSWORD=agrihub psql -h localhost -U agrihub -d agrihub -f database/seeds/demo_tenant.sql -q
+PGPASSWORD=${DB_PASSWORD:-changeme} psql -h localhost -U agrihub -d agrihub -f database/seeds/crop_catalog.sql -q
+PGPASSWORD=${DB_PASSWORD:-changeme} psql -h localhost -U agrihub -d agrihub -f database/seeds/vaccine_schedules.sql -q
+PGPASSWORD=${DB_PASSWORD:-changeme} psql -h localhost -U agrihub -d agrihub -f database/seeds/demo_tenant.sql -q
 echo "  Seed data loaded."
 
 echo "[4/8] Building backend..."

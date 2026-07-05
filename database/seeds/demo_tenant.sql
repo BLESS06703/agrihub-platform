@@ -3,7 +3,7 @@ INSERT INTO tenants (id, name, slug, tenant_type, tenant_tier, country_code, sta
 ('00000000-0000-0000-0000-000000000001', 'Mzuzu Coffee Cooperative', 'mzuzu-coffee', 'COOPERATIVE', 'SCHEMA', 'MW', 'ACTIVE', 'PRO', 100);
 
 INSERT INTO users (id, tenant_id, email, full_name, password_hash, status, email_verified) VALUES
-('00000000-0000-0000-0000-000000000002', '00000000-0000-0000-0000-000000000001', 'scott@mzuzucoffee.mw', 'Scott Manda', '$argon2id$hash', 'ACTIVE', TRUE);
+('00000000-0000-0000-0000-000000000002', '00000000-0000-0000-0000-000000000001', 'scott@mzuzucoffee.mw', 'Scott Manda', 'CHANGE_ME_REPLACE_WITH_REAL_HASH', 'ACTIVE', TRUE);
 
 INSERT INTO farms (id, tenant_id, name, area_hectares, district, status, created_by) VALUES
 ('00000000-0000-0000-0000-000000000003', '00000000-0000-0000-0000-000000000001', 'Mzuzu Coffee Farm', 12.5, 'Mzimba', 'ACTIVE', '00000000-0000-0000-0000-000000000002');
