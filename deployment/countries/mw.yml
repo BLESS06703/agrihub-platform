@@ -1,0 +1,69 @@
+country:
+  code: MW
+  name: Malawi
+  full_name: Republic of Malawi
+  capital: Lilongwe
+  flag: 🇲🇼
+
+currency:
+  code: MWK
+  symbol: MK
+  name: Malawian Kwacha
+  decimal_places: 2
+
+languages:
+  - code: en
+    name: English
+    default: true
+  - code: ny
+    name: Chichewa
+    default: false
+
+timezone: Africa/Blantyre
+
+regions:
+  - name: Northern
+    districts: [Chitipa, Karonga, Rumphi, Mzimba, Nkhata Bay, Likoma]
+  - name: Central
+    districts: [Kasungu, Nkhotakota, Ntchisi, Dowa, Mchinji, Lilongwe, Dedza, Ntcheu, Salima]
+  - name: Southern
+    districts: [Mangochi, Machinga, Zomba, Chiradzulu, Blantyre, Mwanza, Thyolo, Mulanje, Phalombe, Chikwawa, Nsanje, Balaka, Neno]
+
+crops:
+  staple: [Maize, Cassava, Sweet Potatoes, Rice, Sorghum, Millet]
+  cash: [Tobacco, Tea, Sugarcane, Cotton, Coffee, Macadamia]
+  legumes: [Beans, Groundnuts, Soybeans, Pigeon Peas, Cowpeas]
+  vegetables: [Tomato, Onion, Cabbage, Leafy Greens, Pepper, Okra]
+  fruits: [Mango, Banana, Papaya, Citrus, Pineapple, Avocado]
+
+livestock:
+  - Cattle
+  - Goats
+  - Sheep
+  - Pigs
+  - Chickens (Broiler)
+  - Chickens (Layer)
+  - Ducks
+  - Rabbits
+
+mobile_money:
+  - name: Airtel Money
+    provider: airtel
+    code: AIRTEL_MONEY
+  - name: TNM Mpamba
+    provider: tnm
+    code: TNM_MPAMBA
+
+features:
+  ai_assistant: true
+  marketplace: true
+  insurance: false
+  loans: true
+  weather: true
+  offline_sync: true
+  ussd: false
+
+regulations:
+  warehouse_receipt_act: true
+  fisp_program: true
+  organic_certification: true

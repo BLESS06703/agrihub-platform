@@ -1,0 +1,50 @@
+country:
+  code: TZ
+  name: Tanzania
+  full_name: United Republic of Tanzania
+  capital: Dodoma
+
+currency:
+  code: TZS
+  symbol: TSh
+  name: Tanzanian Shilling
+  decimal_places: 0
+
+languages:
+  - code: sw
+    name: Swahili
+    default: true
+  - code: en
+    name: English
+
+timezone: Africa/Dar_es_Salaam
+
+crops:
+  staple: [Maize, Rice, Cassava, Sorghum, Sweet Potatoes]
+  cash: [Coffee, Tea, Cotton, Tobacco, Cashew, Sisal]
+  legumes: [Beans, Groundnuts, Pigeon Peas]
+
+livestock:
+  - Cattle
+  - Goats
+  - Sheep
+  - Chickens
+
+mobile_money:
+  - name: M-Pesa
+    provider: vodacom
+    code: M_PESA
+  - name: Tigo Pesa
+    provider: tigo
+    code: TIGO_PESA
+  - name: Airtel Money
+    provider: airtel
+    code: AIRTEL_MONEY
+
+features:
+  ai_assistant: true
+  marketplace: true
+  insurance: false
+  loans: false
+  weather: true
+  offline_sync: true

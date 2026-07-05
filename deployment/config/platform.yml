@@ -1,0 +1,58 @@
+platform:
+  name: AgriHub Platform
+  version: 1.0.0-alpha
+  environment: development
+  
+architecture:
+  style: modular_monolith
+  backend: Kotlin + Ktor
+  database: PostgreSQL 16
+  cache: Redis 7
+  storage: MinIO
+  messaging: RabbitMQ (future)
+  monitoring: Prometheus + Grafana
+
+deployments:
+  active:
+    - code: MW
+      name: AgriHub Malawi
+      status: development
+  planned:
+    - code: ZM
+      name: AgriHub Zambia
+      status: planned
+    - code: TZ
+      name: AgriHub Tanzania
+      status: planned
+    - code: KE
+      name: AgriHub Kenya
+      status: planned
+    - code: RW
+      name: AgriHub Rwanda
+      status: planned
+    - code: UG
+      name: AgriHub Uganda
+      status: planned
+    - code: MZ
+      name: AgriHub Mozambique
+      status: planned
+
+feature_flags:
+  global:
+    ai_assistant: true
+    marketplace: true
+    offline_sync: true
+    weather: true
+    reports: true
+  per_country:
+    insurance: false
+    loans: true
+    ussd: false
+    satellite_imagery: false
+    iot_integration: false
+
+versioning:
+  api: v1
+  schema_version: 1
+  min_android_version: "8.0"
+  min_ios_version: "15.0"

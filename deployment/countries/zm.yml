@@ -1,0 +1,54 @@
+country:
+  code: ZM
+  name: Zambia
+  full_name: Republic of Zambia
+  capital: Lusaka
+
+currency:
+  code: ZMW
+  symbol: ZK
+  name: Zambian Kwacha
+  decimal_places: 2
+
+languages:
+  - code: en
+    name: English
+    default: true
+  - code: bem
+    name: Bemba
+  - code: ny
+    name: Nyanja
+
+timezone: Africa/Lusaka
+
+crops:
+  staple: [Maize, Cassava, Sorghum, Millet, Rice]
+  cash: [Tobacco, Cotton, Sugarcane, Coffee, Soybeans]
+  legumes: [Beans, Groundnuts, Cowpeas]
+  vegetables: [Tomato, Onion, Cabbage, Rape, Pumpkin Leaves]
+
+livestock:
+  - Cattle
+  - Goats
+  - Sheep
+  - Pigs
+  - Chickens
+
+mobile_money:
+  - name: MTN Money
+    provider: mtn
+    code: MTN_MONEY
+  - name: Airtel Money
+    provider: airtel
+    code: AIRTEL_MONEY
+  - name: Zamtel Kwacha
+    provider: zamtel
+    code: ZAMTEL_KWACHA
+
+features:
+  ai_assistant: true
+  marketplace: true
+  insurance: false
+  loans: true
+  weather: true
+  offline_sync: true

@@ -1,0 +1,30 @@
+security:
+  authentication:
+    method: jwt
+    algorithm: RS256
+    access_token_ttl: 900
+    refresh_token_ttl: 604800
+  
+  password:
+    algorithm: argon2id
+    memory: 65536
+    iterations: 3
+    parallelism: 4
+    min_length: 8
+    require_uppercase: true
+    require_lowercase: true
+    require_digit: true
+    require_special: true
+    
+  authorization:
+    model: rbac
+    permission_format: "resource:action:scope"
+    
+  encryption:
+    at_rest: AES-256-GCM
+    in_transit: TLS 1.3
+    
+  audit:
+    enabled: true
+    retention_days: 365
+    log_all_queries: false

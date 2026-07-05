@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AgriHub Platform - Administration</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="app">
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <h1>AGRIHUB</h1>
+        <span class="version">v5.0</span>
+      </div>
+      <nav class="sidebar-nav">
+        <div class="nav-group">
+          <div class="nav-group-title">Overview</div>
+          <a href="#" class="nav-item active" data-page="dashboard">Dashboard</a>
+        </div>
+        <div class="nav-group">
+          <div class="nav-group-title">Agriculture</div>
+          <a href="#" class="nav-item" data-page="farms">Farms</a>
+          <a href="#" class="nav-item" data-page="fields">Fields</a>
+          <a href="#" class="nav-item" data-page="crops">Crops</a>
+          <a href="#" class="nav-item" data-page="harvests">Harvests</a>
+        </div>
+        <div class="nav-group">
+          <div class="nav-group-title">Operations</div>
+          <a href="#" class="nav-item" data-page="livestock">Livestock</a>
+          <a href="#" class="nav-item" data-page="inventory">Inventory</a>
+          <a href="#" class="nav-item" data-page="warehouse">Warehouse</a>
+          <a href="#" class="nav-item" data-page="marketplace">Marketplace</a>
+        </div>
+        <div class="nav-group">
+          <div class="nav-group-title">Finance</div>
+          <a href="#" class="nav-item" data-page="income">Income</a>
+          <a href="#" class="nav-item" data-page="expenses">Expenses</a>
+          <a href="#" class="nav-item" data-page="budgets">Budgets</a>
+          <a href="#" class="nav-item" data-page="loans">Loans</a>
+        </div>
+        <div class="nav-group">
+          <div class="nav-group-title">Intelligence</div>
+          <a href="#" class="nav-item" data-page="ai">AI Assistant</a>
+          <a href="#" class="nav-item" data-page="reports">Reports</a>
+          <a href="#" class="nav-item" data-page="analytics">Analytics</a>
+        </div>
+        <div class="nav-group">
+          <div class="nav-group-title">System</div>
+          <a href="#" class="nav-item" data-page="tenants">Tenants</a>
+          <a href="#" class="nav-item" data-page="users">Users</a>
+          <a href="#" class="nav-item" data-page="settings">Settings</a>
+          <a href="#" class="nav-item" data-page="audit">Audit Log</a>
+        </div>
+      </nav>
+      <div class="sidebar-footer">
+        <div class="status-indicator active"></div>
+        <span>System Online</span>
+      </div>
+    </aside>
+    <main class="main-content" id="mainContent">
+    </main>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>

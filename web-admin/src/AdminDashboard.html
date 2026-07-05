@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AgriHub Platform - Admin</title>
+  <style>
+    :root {
+      --primary: #2E7D32; --primary-light: #43A047; --accent: #F9A825;
+      --bg: #F8FAF5; --surface: #FFFFFF; --text: #263238; --text-secondary: #546E7A;
+      --success: #4CAF50; --warning: #FB8C00; --error: #D32F2F;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); }
+    .sidebar { width: 250px; background: var(--primary); color: white; height: 100vh; position: fixed; padding: 24px 0; }
+    .sidebar h1 { padding: 0 24px 24px; font-size: 20px; border-bottom: 1px solid rgba(255,255,255,0.2); }
+    .sidebar nav a { display: block; padding: 12px 24px; color: rgba(255,255,255,0.8); text-decoration: none; }
+    .sidebar nav a:hover, .sidebar nav a.active { background: rgba(255,255,255,0.1); color: white; }
+    .main { margin-left: 250px; padding: 32px; }
+    .card { background: var(--surface); border-radius: 12px; padding: 24px; margin-bottom: 16px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+    .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 24px; }
+    .stat-card { background: var(--surface); border-radius: 12px; padding: 24px; }
+    .stat-card .value { font-size: 32px; font-weight: bold; color: var(--primary); }
+    .stat-card .label { color: var(--text-secondary); margin-top: 4px; }
+    .btn { padding: 8px 16px; border: none; border-radius: 8px; cursor: pointer; font-weight: 500; }
+    .btn-primary { background: var(--primary); color: white; }
+    .btn-warning { background: var(--warning); color: white; }
+    table { width: 100%; border-collapse: collapse; }
+    th, td { padding: 12px; text-align: left; border-bottom: 1px solid #E0E0E0; }
+    th { color: var(--text-secondary); font-weight: 500; font-size: 13px; text-transform: uppercase; }
+    .badge { padding: 4px 8px; border-radius: 4px; font-size: 12px; font-weight: 500; }
+    .badge-active { background: #E8F5E9; color: var(--primary); }
+    .badge-pending { background: #FFF3E0; color: var(--warning); }
+  </style>
+</head>
+<body>
+  <aside class="sidebar">
+    <h1>AgriHub Admin</h1>
+    <nav>
+      <a href="#" class="active">Dashboard</a>
+      <a href="#">Tenants</a>
+      <a href="#">Users</a>
+      <a href="#">Farms</a>
+      <a href="#">Marketplace</a>
+      <a href="#">Finance</a>
+      <a href="#">Reports</a>
+      <a href="#">Settings</a>
+    </nav>
+  </aside>
+  <main class="main">
+    <h2 style="margin-bottom: 24px; color: var(--primary);">Platform Dashboard</h2>
+    <div class="stats">
+      <div class="stat-card"><div class="value">1,247</div><div class="label">Total Tenants</div></div>
+      <div class="stat-card"><div class="value">8,542</div><div class="label">Registered Farmers</div></div>
+      <div class="stat-card"><div class="value">MWK 45M</div><div class="label">Transactions</div></div>
+      <div class="stat-card"><div class="value">99.9%</div><div class="label">Uptime</div></div>
+    </div>
+    <div class="card">
+      <h3 style="margin-bottom: 16px;">Recent Tenants</h3>
+      <table>
+        <thead><tr><th>Tenant</th><th>Type</th><th>Country</th><th>Status</th><th>Users</th></tr></thead>
+        <tbody>
+          <tr><td>Mzuzu Coffee Coop</td><td>Cooperative</td><td>Malawi</td><td><span class="badge badge-active">Active</span></td><td>45</td></tr>
+          <tr><td>Lilongwe Farms Ltd</td><td>Agribusiness</td><td>Malawi</td><td><span class="badge badge-active">Active</span></td><td>120</td></tr>
+          <tr><td>Zambia Maize Collective</td><td>Cooperative</td><td>Zambia</td><td><span class="badge badge-pending">Pending</span></td><td>0</td></tr>
+          <tr><td>Ministry of Agriculture</td><td>Government</td><td>Malawi</td><td><span class="badge badge-active">Active</span></td><td>230</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </main>
+</body>
+</html>
